@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+</head>
+<body>
+    <header>
+        <h1>Feedback Section</h1>
+        <p>Your feedback is very helpful for us</p>
+      </header>
+      <main>
+        <form action="http://localhost:3000" method="POST">
+          <fieldset>
+            <legend>Personal Details</legend>
+
+            <label for="name">Name (Required):</label>
+            <input type="text" name="name" id="name" required />
+
+            <label for="email">Email (Required):</label>
+            <input type="email" name="email" id="email" minlength="8" maxlength="100" required/>
+
+            <label for="age">Age (Optional):</label>
+            <input type="number" name="age" id="age" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Was this your first time at our hotel?</legend>
+
+            <input type="radio" name="hotel-stay" id="yes" value="yes" />
+            <label for="yes">Yes</label>
+
+            <input type="radio" name="hotel-stay" id="no" value="no" />
+            <label for="no">No</label>
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Why did you choose to stay at our hotel? (Check all that apply)</legend>
+
+            <input type="checkbox" name="choice" id="ads" value="ads" />
+            <label for="ads">Social Media Ads</label>
+
+            <input type="checkbox" name="choice" id="recommendation" value="recommendation" />
+            <label for="recommendation">Personal Recommendation</label>
+
+            <input type="checkbox" name="choice" id="location" value="location" />
+            <label for="location">Location</label>
+
+            <input type="checkbox" name="choice" id="reputation" value="reputation" />
+            <label for="reputation">Reputation</label>
+
+            <input type="checkbox" name="choice" id="price" value="price" />
+            <label for="price">Price</label>
+
+          </fieldset>
+
+          <fieldset>
+            <legend>Ratings</legend>
+
+            <label for="service">How was the service?</label>
+            <select name="service" id="service">
+              <option value="poor">Poor</option>
+              <option value="satisfactory">Satisfactory</option>
+              <option value="good">Good</option>
+              <option value="very-good">Very Good</option>
+              <option value="excellent" selected>Excellent</option>
+            </select>
+
+            <label for="food">How was the food?</label>
+            <select name="food" id="food">
+              <option value="poor">Poor</option>
+              <option value="satisfactory">Satisfactory</option>
+              <option value="good">Good</option>
+              <option value="very-good">Very Good</option>
+              <option value="excellent" selected>Excellent</option>
+            </select>
+          </fieldset>
+          <br />
+
+          <label for="review">Other Comments?</label> <br />
+          <textarea name="review" id=review rows="5" cols="40"></textarea>
+
+          <br />
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </form>
+      </main>
+
+</body>
+</html>
